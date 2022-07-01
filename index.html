@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>New Project</title>
+        <title>Circular Paths</title>
         <meta name="viewport" content="width=device-width">
         <link href="index.css" type="text/css" rel="stylesheet">
-        <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js" defer></script> -->
-        <!-- <script src="index.js" defer></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js" defer></script>
+        <script src="path.js" defer></script>
+        <script src="index.js" defer></script>
     </head>
     <body>
+        <div class="dropdown floating">
+            <div class=dropdown-icon>▼</div>
+            <div class=dropdown-content>
+                <label for="num-paths">Number of Paths</label>
+                <input type="number" name="num-paths" id="num-paths" value="10" oninput="reset()">
+                <label for="speed">Speed</label>
+                <input type="number" name="speed" id="speed" value="1" oninput="reset()">
+                <label for="path-radius">Path Radius</label>
+                <input type="number" name="path-radius" id="path-radius" value="100" oninput="reset()">
+                <label for="offset-radius">Offset Radius</label>
+                <input type="number" name="offset-radius" id="offset-radius" value="80" oninput="reset()">
+            </div>
+        </div>
     </body>
 </html>

@@ -1,7 +1,51 @@
+:root {
+    --fg: #eee;
+    --bg: #444;
+}
+
 html,
 body{
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
+
+.floating{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.dropdown{
+    padding: 4px;
+    border-radius: 6px;
+    color: var(--fg);
+    background: var(--bg);
+}
+
+.dropdown-icon {
+    display: block;
+    user-select: none;
+}
+
+.dropdown-content {
+    display: none;
+    white-space: nowrap;
+}
+
+.dropdown-content input{
+    display: block;
+}
+
+.dropdown:focus-within > .dropdown-icon,
+.dropdown:hover > .dropdown-icon{
+    display: none;
+}
+
+.dropdown:focus-within > .dropdown-content,
+.dropdown:hover > .dropdown-content{
+    display: block;
+}
+
